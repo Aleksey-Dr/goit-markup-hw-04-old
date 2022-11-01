@@ -1,0 +1,595 @@
+/* All */
+/* Загальна блокова модель */
+html {
+  /* Geometry */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  /* Geometry */
+  box-sizing: inherit;
+}
+
+:root {
+  /* Color, text */
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+}
+
+/* Styles body */
+body {
+  /* Geometry */
+  /* Remove default value margin: 8px; */
+  margin: 0;
+
+  /* Color, text */
+  background-color: #ffffff;
+  color: var(--primary-text-color);
+  font-family: "Roboto", sans-serif;
+}
+
+/* Виправлення ДЗ п.5 Обнуління для заголовків і піріграфу */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  /* Geometry */
+  margin-top: 0;
+}
+
+img {
+  /* Geometry */
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Class-utility .list - прибирає маркери у списках */
+.list {
+  /* Geometry */
+  padding-left: 0;
+  margin: 0;
+
+  /* Color, text */
+  list-style: none;
+}
+
+/* Size container */
+.container {
+  /* Geometry */
+  /* Outline */
+  /* outline: 2px solid blue; */
+  box-sizing: border-box;
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  /* Centering */
+  margin: 0 auto;
+}
+
+/* Class-utility .link - removed underline in link (in logo) */
+.link-decoration a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Classes for header */
+/* Site nav */
+/* Classes logo */
+.logo {
+  /* Geometry */
+  display: block;
+  padding-top: 24px;
+  margin-right: 93px;
+
+  /* Color, text */
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.logo-web {
+  /* Color, text */
+  color: #2196f3;
+}
+
+/* Styles for background */
+/* Виправлення ДЗ. п.1 Видалено падінги в хедері */
+.header-page {
+  /* Geometry */
+  /* Outline */
+  /* outline: 2px solid green; */
+  border-bottom: 1px solid #ececec;
+
+  /* Color, text */
+  background-color: #ffffff;
+}
+
+/* Flex 5 */
+.container-header {
+  /* Geometry */
+  display: flex;
+  align-items: center;
+}
+
+/* Styles links in header */
+/* Header navigation to pages*/
+/* Flex 6 */
+.nav-main {
+  /* Geometry */
+  display: flex;
+  margin-bottom: 25px;
+}
+
+/* Flex 1 */
+.nav-ul-site {
+  /* Geometry */
+  display: flex;
+}
+
+/* Flex 2 Add margin. Edge geometry cleaning */
+.nav-ul-site .item:not(:last-child) {
+  /* Geometry */
+  margin-right: 50px;
+}
+
+.nav-ul-site .link {
+  /* Geometry */
+  /* Виправлення ДЗ. п.1 */
+  display: block;
+  padding-top: 32px;
+
+  /* Color, text */
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav-ul-site .link:hover,
+.nav-ul-site .link:focus {
+  color: var(--accent-color);
+}
+
+.nav-ul-site .link.current {
+  color: var(--accent-color);
+}
+
+/* Header contacts */
+/* Flex 3 */
+.header-contacts {
+  /* Geometry */
+  display: flex;
+  margin-bottom: 25px;
+  margin-left: auto;
+}
+
+/* Flex 4 */
+.header-contacts .item:not(:last-child) {
+  /* Geometry */
+  margin-right: 50px;
+}
+
+.header-contacts .link {
+  /* Geometry */
+  /* Виправлення ДЗ. п.1 */
+  display: block;
+  padding-top: 32px;
+
+  /* Color, text */
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.header-contacts .link:hover,
+.header-contacts .link:focus {
+  color: var(--accent-color);
+}
+
+/* The Studio page */
+/* Styles for title sections Studio */
+.saction-title {
+  /* Geometry */
+  /* Outline */
+  /* outline: 2px solid red; */
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  /* Color, text */
+  color: var(--title-text-color);
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* Hero section */
+/* Backgroung hero-section */
+.hero {
+  /* Geometry */
+  /* Outline */
+  /* outline: 2px solid blue; */
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  /* Color, text */
+  background-color: #2f303a;
+}
+
+/* Hero section Studio */
+.hero-title {
+  /* Geometry */
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  /* Color, text */
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Виправлення ДЗ. п.3 */
+.hero-button {
+  /* Geometry */
+  display: flex;
+  width: 216px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  /* Rounding */
+  border-radius: 4px;
+  margin: auto;
+
+  /* Color, text */
+  background-color: #2196f3;
+  border-color: #2196f3;
+  cursor: pointer;
+  /* For title */
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #188ce8;
+}
+
+/* Hang section */
+/* Styles of the Hang section */
+.hang {
+  /* Geometry */
+  /* Outline */
+
+  padding-top: 94px;
+}
+
+.hang-list {
+  /* Geometry */
+  /* Flex 7 */
+  display: flex;
+}
+
+/* Flex 10 */
+.hang-list .item {
+  width: 270px;
+}
+
+.hang-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.hang-list .hang-title {
+  /* Geometry */
+  /* Outline */
+  /* outline: 2px solid red; */
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  /* Color, text */
+  color: var(--title-text-color);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.hang-list p {
+  /* Geometry */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  /* Cplor, text */
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+/* What are we doing section */
+.we-doing {
+  /* Geometry */
+  /* Outline */
+
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Flex 8 */
+.we-doing .list {
+  /* Geometry */
+  display: flex;
+}
+
+/* Geometry */
+.we-doing .item {
+  display: block;
+  width: 370px;
+}
+
+/* Geometry */
+.we-doing .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Our Team section */
+.our-team {
+  /* Geometry */
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  /* Color, text */
+  background-color: #f5f4fa;
+}
+
+/* Flex 9 */
+.our-team .list {
+  /* Geometry */
+  display: flex;
+}
+
+/* Geometry */
+.our-team .container-team:not(:last-child) {
+  margin-right: 30px;
+}
+
+.our-team p {
+  /* Geometry */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  /* Color, text */
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.our-names {
+  /* Geometry */
+  margin-bottom: 10px;
+
+  /* Color, text */
+  color: #212121;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.container-team {
+  /* Geometry */
+  /* Виправлення ДЗ. п.4 Радіус */
+  border-radius: 4px;
+
+  /* Color, text */
+  background-color: #ffffff;
+}
+
+.container-team-div {
+  /* Geometry */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Footer */
+.footer-back {
+  /* Geometry */
+  /* Виправлення ДЗ. п.6 Змінено значення падінгів */
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  /* Color, text */
+  background-color: #2f303a;
+}
+
+.logo-footer {
+  /* Geometry */
+  display: block;
+  /* Виправлення ДЗ. п.7 Видалено падінги. Значення марджин-боттом змінено на 20 пікселів */
+  margin-bottom: 20px;
+
+  /* Color, text */
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+/* Виправлення ДЗ. п.8 Видалено падінги. Додано марджин-боттом 9 пікселів */
+.address-footer .item:not(:last-child) {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.address-footer .link {
+  /* Color, text */
+  color: #ffffff;
+}
+
+.address-footer a {
+  /* Color, text */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.address-footer a:hover,
+.address-footer a:focus {
+  color: var(--accent-color);
+}
+
+.contacts-footer {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contacts-footer:hover,
+.contacts-footer:focus {
+  color: var(--accent-color);
+}
+
+/* Portfolio page */
+/* Hero section Prtfolio */
+
+.portfolio {
+  /* Geometry */
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Buttons system */
+/* Flex 13 */
+.portfolio-list {
+  /* Geometry */
+  justify-content: center;
+  /* Виправлення ДЗ. п.10 */
+  margin-bottom: 50px;
+}
+
+.portfolio .item-button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-button {
+  /* Geometry */
+  /* Виправлення ДЗ. п.9 */
+  padding: 6px 22px;
+  border: none;
+
+  /* Color, text */
+  color: var(--title-text-color);
+  background-color: #f5f4fa;
+  border-color: #f5f4fa;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+
+/* Flex 11 */
+.portfolio .list {
+  /* Geometry */
+  display: flex;
+}
+
+/* Styles for title sections Prtfolio */
+.container-title {
+  /* Geometry */
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  /* Color, text */
+  color: var(--title-text-color);
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+/* Flex 12 */
+.container-portfolio {
+  /* Geometry */
+  flex-wrap: wrap;
+}
+
+.container-portfolio .item {
+  /* Geometry */
+  display: block;
+  width: 370px;
+}
+
+/* Geometry */
+.container-portfolio .item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+/* Geometry */
+.container-portfolio .item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+.container-portfolio p {
+  /* Geometry */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  /* Color, text */
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+}
+
+.container-border {
+  /* Geometry */
+  /* Виправлення ДЗ. п.11 */
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
