@@ -1,5 +1,4 @@
 /* All */
-/* Загальна блокова модель */
 html {
   /* Geometry */
   box-sizing: border-box;
@@ -31,7 +30,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* Виправлення ДЗ п.5 Обнуління для заголовків і піріграфу */
 h1,
 h2,
 h3,
@@ -50,7 +48,7 @@ img {
   height: auto;
 }
 
-/* Class-utility .list - прибирає маркери у списках */
+/* Class-utility .list - removed markers in lists */
 .list {
   /* Geometry */
   padding-left: 0;
@@ -63,8 +61,6 @@ img {
 /* Size container */
 .container {
   /* Geometry */
-  /* Outline */
-  /* outline: 2px solid blue; */
   box-sizing: border-box;
   width: 1200px;
   padding-right: 15px;
@@ -73,7 +69,7 @@ img {
   margin: 0 auto;
 }
 
-/* Class-utility .link - removed underline in link (in logo) */
+/* Class-utility .link - removed underline in links (in logo) */
 .link-decoration a {
   text-decoration: none;
 }
@@ -98,6 +94,7 @@ img {
   /* Geometry */
   display: block;
   padding-top: 24px;
+  padding-bottom: 25px;
   margin-right: 93px;
 
   /* Color, text */
@@ -115,15 +112,10 @@ img {
 }
 
 /* Styles for background */
-/* Виправлення ДЗ. п.1 Видалено падінги в хедері */
 .header-page {
-  /* Geometry */
-  /* Outline */
-  /* outline: 2px solid green; */
-  border-bottom: 1px solid #ececec;
-
-  /* Color, text */
+  /* Background */
   background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
 }
 
 /* Flex 5 */
@@ -139,7 +131,6 @@ img {
 .nav-main {
   /* Geometry */
   display: flex;
-  margin-bottom: 25px;
 }
 
 /* Flex 1 */
@@ -156,9 +147,9 @@ img {
 
 .nav-ul-site .link {
   /* Geometry */
-  /* Виправлення ДЗ. п.1 */
   display: block;
   padding-top: 32px;
+  padding-bottom: 32px;
 
   /* Color, text */
   color: var(--title-text-color);
@@ -182,21 +173,20 @@ img {
 .header-contacts {
   /* Geometry */
   display: flex;
-  margin-bottom: 25px;
   margin-left: auto;
 }
 
 /* Flex 4 */
 .header-contacts .item:not(:last-child) {
   /* Geometry */
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 .header-contacts .link {
   /* Geometry */
-  /* Виправлення ДЗ. п.1 */
   display: block;
   padding-top: 32px;
+  padding-bottom: 32px;
 
   /* Color, text */
   color: var(--primary-text-color);
@@ -211,12 +201,26 @@ img {
   color: var(--accent-color);
 }
 
+/* SVG */
+.icon-envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+/* SVG */
+.icon-smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 /* The Studio page */
 /* Styles for title sections Studio */
 .saction-title {
   /* Geometry */
-  /* Outline */
-  /* outline: 2px solid red; */
   margin-top: 0;
   margin-bottom: 50px;
 
@@ -231,14 +235,25 @@ img {
 /* Hero section */
 /* Backgroung hero-section */
 .hero {
+  /* Background */
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/studio-hero-back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
   /* Geometry */
-  /* Outline */
-  /* outline: 2px solid blue; */
+  max-width: 1600px;
+  min-height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
-
-  /* Color, text */
-  background-color: #2f303a;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Hero section Studio */
@@ -257,7 +272,6 @@ img {
   text-transform: uppercase;
 }
 
-/* Виправлення ДЗ. п.3 */
 .hero-button {
   /* Geometry */
   display: flex;
@@ -292,8 +306,6 @@ img {
 /* Styles of the Hang section */
 .hang {
   /* Geometry */
-  /* Outline */
-
   padding-top: 94px;
 }
 
@@ -308,14 +320,54 @@ img {
   width: 270px;
 }
 
+.hang-list .item::before {
+  /* Background */
+  content: "";
+  height: 120px;
+  width: 270px;
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* Geometry */
+  display: block;
+  margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+  /* Background */
+  height: 70px;
+  width: 70px;
+  background-image: url("../images/antenna.svg");
+}
+
+.icon-clock::before {
+  /* Background */
+  height: 70px;
+  width: 70px;
+  background-image: url("../images/clock.svg");
+}
+
+.icon-diagram::before {
+  /* Background */
+  height: 70px;
+  width: 70px;
+  background-image: url("../images/diagram.svg");
+}
+
+.icon-astronaut::before {
+  /* Background */
+  height: 70px;
+  width: 70px;
+  background-image: url("../images/astronaut.svg");
+}
+
 .hang-list .item:not(:last-child) {
   margin-right: 30px;
 }
 
 .hang-list .hang-title {
   /* Geometry */
-  /* Outline */
-  /* outline: 2px solid red; */
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -341,8 +393,6 @@ img {
 /* What are we doing section */
 .we-doing {
   /* Geometry */
-  /* Outline */
-
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -366,12 +416,12 @@ img {
 
 /* Our Team section */
 .our-team {
+  /* Background */
+  background-color: #f5f4fa;
+
   /* Geometry */
   padding-top: 94px;
   padding-bottom: 94px;
-
-  /* Color, text */
-  background-color: #f5f4fa;
 }
 
 /* Flex 9 */
@@ -388,7 +438,7 @@ img {
 .our-team p {
   /* Geometry */
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 
   /* Color, text */
   line-height: 19px;
@@ -410,35 +460,128 @@ img {
 }
 
 .container-team {
-  /* Geometry */
-  /* Виправлення ДЗ. п.4 Радіус */
-  border-radius: 4px;
-
-  /* Color, text */
+  /* Background */
   background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  /* Geometry */
+  border-radius: 0px 0px 4px 4px;
 }
 
 .container-team-div {
   /* Geometry */
   padding-top: 30px;
+  padding-right: 32px;
   padding-bottom: 30px;
+  padding-left: 32px;
 }
 
-/* Footer */
-.footer-back {
+.container-team-div .item {
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.container-team-div .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.container-team-div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* svg */
+.icon-social-link {
+  width: 20px;
+  height: 20px;
+}
+
+/* svg */
+.icon-instagram {
+  width: 20px;
+  height: 20px;
+}
+
+/* svg */
+.icon-twitter {
+  width: 20px;
+  height: 20px;
+}
+
+/* svg */
+.icon-facebook {
+  width: 20px;
+  height: 20px;
+}
+
+/* svg */
+.icon-linkedin {
+  width: 20px;
+  height: 20px;
+}
+
+/* REGULAR CUSTOMERS */
+.regular-customers {
+  /* Background */
+  background-color: #ffffff;
+
   /* Geometry */
-  /* Виправлення ДЗ. п.6 Змінено значення падінгів */
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Flex */
+.regular-customers .list {
+  display: flex;
+}
+
+.regular-customers .item {
+  /* Background */
+  background-color: #ffffff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* Geometry */
+  height: 92px;
+  width: 170px;
+  /* Outline */
+  outline: 2px solid red;
+}
+
+.regular-customers .item:not(:last-child) {
+  /* Geometry */
+  margin-right: 30px;
+}
+
+/* svg  */
+.icon-logo-company {
+  height: 60px;
+  width: 106px;
+  left: 6px;
+  top: 16px;
+  border-radius: 0px;
+}
+
+/* FOOTER */
+.footer-back {
+  /* Background */
+  background-color: #2f303a;
+
+  /* Geometry */
   padding-top: 60px;
   padding-bottom: 60px;
-
-  /* Color, text */
-  background-color: #2f303a;
 }
 
 .logo-footer {
   /* Geometry */
   display: block;
-  /* Виправлення ДЗ. п.7 Видалено падінги. Значення марджин-боттом змінено на 20 пікселів */
   margin-bottom: 20px;
 
   /* Color, text */
@@ -450,7 +593,6 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* Виправлення ДЗ. п.8 Видалено падінги. Додано марджин-боттом 9 пікселів */
 .address-footer .item:not(:last-child) {
   display: block;
   margin-bottom: 9px;
@@ -486,7 +628,6 @@ img {
 
 /* Portfolio page */
 /* Hero section Prtfolio */
-
 .portfolio {
   /* Geometry */
   padding-top: 94px;
@@ -498,7 +639,6 @@ img {
 .portfolio-list {
   /* Geometry */
   justify-content: center;
-  /* Виправлення ДЗ. п.10 */
   margin-bottom: 50px;
 }
 
@@ -508,7 +648,6 @@ img {
 
 .filter-button {
   /* Geometry */
-  /* Виправлення ДЗ. п.9 */
   padding: 6px 22px;
   border: none;
 
@@ -588,7 +727,6 @@ img {
 
 .container-border {
   /* Geometry */
-  /* Виправлення ДЗ. п.11 */
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
