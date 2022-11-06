@@ -96,3 +96,9 @@ Background
 2. Create icon-logo-company class with values properties.
 3. Create .container-team-div a selector with values properties.
 4. Create .icon-social-link class with values properties.
+
+06/11/2022
+
+1. Create .join-container class with values properties.
+2. Create .container-team-div .item:hover.container-team-div .item:hover.
+3. Create .join-list .item:hover.
